@@ -74,6 +74,7 @@ public class RadiomanTest {
         radio.increaseVolume();
         assertEquals(1, radio.getCurrentVolume());
     }
+
     @Test
     void shouldIncreaseVolumeTest() {
         radio.setCurrentVolume(9);
