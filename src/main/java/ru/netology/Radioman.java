@@ -14,13 +14,51 @@ public class Radioman {
     private int maxStation = 9;
     private int currentVolume;
     private int minVolume = 0;
-    private int maxVolume = 10;
+    private int maxVolume = 100;
+
+    public void nextStation() {
+        if (currentStation !=maxStation) {
+            currentStation++;
+        } else {
+            currentStation = minStation;
+        }
+    }
+
+    public void prevStation() {
+        if (currentStation !=minStation) {
+            currentStation--;
+        } else {
+            currentStation = maxStation;
+        }
+    }
+
+    public void nextVolume() {
+        if (currentVolume !=maxVolume) {
+            currentVolume++;
+        } else {
+            currentVolume = maxVolume;
+        }
+    }
+
+    public void prevVolume() {
+        if (currentVolume !=minVolume) {
+            currentVolume--;
+        } else {
+            currentVolume = minVolume;
+        }
+    }
 
     public int getCurrentStation() {
         return currentStation;
     }
 
     public void setCurrentStation(int currentStation) {
+        if (currentStation < minStation) {
+            return;
+        }
+        if (currentStation > maxStation) {
+            return;
+        }
         this.currentStation = currentStation;
     }
 
@@ -45,6 +83,12 @@ public class Radioman {
     }
 
     public void setCurrentVolume(int currentVolume) {
+        if (currentVolume < minVolume) {
+            return;
+        }
+        if (currentVolume > maxVolume) {
+            return;
+        }
         this.currentVolume = currentVolume;
     }
 
@@ -62,14 +106,6 @@ public class Radioman {
 
     public void setMaxVolume(int maxVolume) {
         this.maxVolume = maxVolume;
-    }
-
-    public void nextStation() {
-        if (maxStation <= currentStation) {
-            setCurrentStation(minStation);
-        } else {
-            setCurrentStation(currentStation + 1);
-        }
     }
 }
 
