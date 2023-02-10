@@ -1,4 +1,5 @@
 package ru.netology;
+
 public class Radioman {
 
     private int currentStation;
@@ -42,7 +43,7 @@ public class Radioman {
 
     public void setCurrentVolume(int currentVolume) {
         if (currentVolume < minVolume || currentVolume > maxVolume) {
-           return;
+            return;
         }
         this.currentVolume = currentVolume;
     }

@@ -5,7 +5,7 @@ import org.junit.jupiter.api.Test;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
 
-public class RadiomanTest { 
+public class RadiomanTest {
 
     Radioman radio = new Radioman();
 
@@ -74,6 +74,7 @@ public class RadiomanTest {
         radio.increaseVolume();
         assertEquals(1, radio.getCurrentVolume());
     }
+
     @Test
     void shouldIncreaseVolumeTest() {
         radio.setCurrentVolume(9);
