@@ -17,8 +17,7 @@ public class Radioman {
         this.minVolume = minVolume;
         this.currentVolume = currentVolume;
     }
-
-
+    
     public int getCurrentStation() {
         return currentStation;
     }
