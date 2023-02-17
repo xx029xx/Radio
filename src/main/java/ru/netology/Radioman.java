@@ -9,13 +9,21 @@ public class Radioman {
     private int minVolume = 0;
     private int maxVolume = 100;
 
+    // public Radioman() {
+    //   this.maxStation = maxStation;
+    // this.minStation = minStation;
+    // this.currentStation = currentStation;
+    // this.maxVolume = maxVolume;
+    // this.minVolume = minVolume;
+    //   this.currentVolume = currentVolume;
+    //  }
+
     public Radioman() {
-        this.maxStation = maxStation;
-        this.minStation = minStation;
-        this.currentStation = currentStation;
-        this.maxVolume = maxVolume;
-        this.minVolume = minVolume;
-        this.currentVolume = currentVolume;
+        this.maxStation = 9;
+    }
+
+    public Radioman(int stationCount) {
+        this.maxStation = stationCount - 1;
     }
     
     public int getCurrentStation() {
