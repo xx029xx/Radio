@@ -6,7 +6,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-
+//это не обязательное задание, как его закрыть, чтобы не выполнять? я обсолютно не понимаю, что тут делать. Я делаю ломбок пошагово, как было в видео.
 public class Radioman {
 
     private int currentStation;
@@ -15,18 +15,6 @@ public class Radioman {
     private int currentVolume;
     private int minVolume = 0;
     private int maxVolume = 100;
-
-    public Radioman() {
-    }
-
-    public Radioman(int currentStation, int minStation, int maxStation, int currentVolume, int minVolume, int maxVolume) {
-        this.currentStation = currentStation;
-        this.minStation = minStation;
-        this.maxStation = maxStation;
-        this.currentVolume = currentVolume;
-        this.minVolume = minVolume;
-        this.maxVolume = maxVolume;
-    }
 
     public int getCurrentStation() {
         return currentStation;
