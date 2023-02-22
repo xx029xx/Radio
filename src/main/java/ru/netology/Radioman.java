@@ -119,5 +119,17 @@ public class Radioman {
     public int getCurrentChannel() {
         return currentStation;
     }
+
+    public void nextStation() {
+    }
+
+    public void prevStation() {
+    }
+
+    public void nextVolume() {
+    }
+
+    public void prevVolume() {
+    }
 }
 
