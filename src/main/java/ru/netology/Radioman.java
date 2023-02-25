@@ -1,4 +1,5 @@
 package ru.netology;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -6,15 +7,27 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Data
-//это не обязательное задание, как его закрыть, чтобы не выполнять? я обсолютно не понимаю, что тут делать. Я делаю ломбок пошагово, как было в видео.
-public class Radioman {
 
+public class Radioman {
     private int currentStation;
-    private int minStation = 0;
-    private int maxStation = 9;
     private int currentVolume;
-    private int minVolume = 0;
-    private int maxVolume = 100;
+    private int counterStation;
+    private int minStation;
+    private int maxStation = 10;
+    private int minVolume;
+    private int maxVolume = 100;{
+
+        this.currentStation = currentStation;
+        this.currentVolume = currentVolume;
+        this.counterStation = counterStation;
+        this.minStation = minStation;
+        this.maxStation = maxStation;
+        this.minVolume = minVolume;
+        this.maxVolume = maxVolume;
+    }
+
+    protected Radioman(int i, int i1) {
+    }
 
     public int getCurrentStation() {
         return currentStation;
@@ -22,6 +35,22 @@ public class Radioman {
 
     public void setCurrentStation(int currentStation) {
         this.currentStation = currentStation;
+    }
+
+    public int getCurrentVolume() {
+        return currentVolume;
+    }
+
+    public void setCurrentVolume(int currentVolume) {
+        this.currentVolume = currentVolume;
+    }
+
+    public int getCounterStation() {
+        return counterStation;
+    }
+
+    public void setCounterStation(int counterStation) {
+        this.counterStation = counterStation;
     }
 
     public int getMinStation() {
@@ -55,81 +84,4 @@ public class Radioman {
     public void setMaxVolume(int maxVolume) {
         this.maxVolume = maxVolume;
     }
-
-    public void increaseVolume() {
-        if (currentVolume == maxVolume) {
-            return;
-        }
-        currentVolume++;
-    }
-
-    public void decreaseVolume() {
-        if (currentVolume == minVolume) {
-            return;
-        }
-        currentVolume--;
-    }
-
-    public void increaseChannel() {
-        if (currentStation == maxStation) {
-            this.currentStation = minStation;
-            return;
-        }
-        currentStation++;
-    }
-
-    public void decreaseChannel() {
-        if (currentStation == minStation) {
-            this.currentStation = maxStation;
-            return;
-        }
-        currentStation--;
-    }
-
-
-    public int getCurrentVolume() {
-        return currentVolume;
-    }
-
-    public void setCurrentVolume(int currentVolume) {
-        if (currentVolume > maxVolume) {
-            this.currentVolume = maxVolume;
-            return;
-        }
-        if (currentVolume < minVolume) {
-            this.currentVolume = minVolume;
-            return;
-        }
-        this.currentVolume = currentVolume;
-    }
-
-
-    public void setCurrentChannel(int currentChannel) {
-        if (currentChannel > maxStation) {
-
-            return;
-        }
-        if (currentChannel < minStation) {
-
-            return;
-        }
-        this.currentStation = currentChannel;
-    }
-
-    public int getCurrentChannel() {
-        return currentStation;
-    }
-
-    public void nextStation() {
-    }
-
-    public void prevStation() {
-    }
-
-    public void nextVolume() {
-    }
-
-    public void prevVolume() {
-    }
 }
-
